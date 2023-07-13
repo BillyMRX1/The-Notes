@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">The Notes</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- Generic Text -->
+    <string name="title_alert_dialog_delete_notes">Are you sure you want to delete this note?</string>
+
+    <!-- Hint -->
+    <string name="hint_title_notes">Title</string>
+    <string name="hint_body_notes">Start typing...</string>
+
+    <!-- Content Description -->
+    <string name="content_description_create_notes">Create New Notes</string>
+    <string name="content_description_save_notes">Save Notes</string>
+    <string name="content_description_back_button">Back Button</string>
+    <string name="content_description_delete_button">Delete Button</string>
+</resources>
