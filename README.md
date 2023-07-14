@@ -6,6 +6,12 @@ This is a simple note app build using jetpack compose and material 3. This app u
 
 The App build with MVVM Design Pattern and Dagger Hilt.
 
+## Plan of Improvement
+
+1. Cloud storage using firebase
+2. Firebase Authentication (for cloud storage)
+3. To Do List Notes
+
 ## License
 
 ```
