@@ -5,8 +5,8 @@
 
     <style name="Theme.Notes.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/md_theme_light_onPrimary</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_notes_logo</item>
-        <item name="windowSplashScreenAnimationDuration">800</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_notes_anim</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
         <item name="postSplashScreenTheme">@style/Theme.Notes</item>
     </style>
 </resources>
