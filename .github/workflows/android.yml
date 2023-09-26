@@ -41,7 +41,7 @@ jobs:
       run: npm install -g firebase-tools
 
     - name: Print Credential
-      run: echo ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+      run: echo "${{ secrets.CREDENTIAL_FILE_CONTENT }}"
 
     - name: Firebase App Distribution
       uses: wzieba/Firebase-Distribution-Github-Action@v1.6.0
