@@ -37,6 +37,14 @@ jobs:
         name: app-release
         path: app/build/outputs/apk/release/*.apk
 
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools
+
+    - name: Authenticate Firebase
+      run: firebase login:ci
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
     - name: Deploy to Firebase App Distribution
       run: |
         firebase auth:import ${FIREBASE_SERVICE_ACCOUNT_KEY} --project playground-132e7
