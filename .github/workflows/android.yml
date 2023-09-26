@@ -45,6 +45,6 @@ jobs:
       with:
         appId: 1:68047584491:android:b275e5022e4f98a48992ae
         token: ${{ secrets.FIREBASE_TOKEN }}
-        file: home/runner/work/The-Notes/The-Notes/app/build/outputs/apk/release/*.apk
+        file: app-release/*.apk
         groups: developer
         releaseNotes: ${{ github.event.head_commit.message }}
