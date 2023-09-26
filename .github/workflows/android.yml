@@ -37,7 +37,7 @@ jobs:
     - name: Deploy to Firebase App Distribution
       run: |
         firebase auth:import ${FIREBASE_SERVICE_ACCOUNT_KEY} --project playground-132e7
-        firebase appdistribution:distribute app/build/outputs/apk/release/*.apk --app 1:68047584491:android:b275e5022e4f98a48992ae --groups developer
+        firebase appdistribution:distribute app-release/*.apk --app 1:68047584491:android:b275e5022e4f98a48992ae --groups developer
       env:
         FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
-      working-directory: app/build/outputs/apk/release/*.apk
+      working-directory: app-release/*.apk
