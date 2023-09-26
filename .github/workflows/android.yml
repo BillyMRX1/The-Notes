@@ -46,4 +46,3 @@ jobs:
         firebase appdistribution:distribute app/build/outputs/apk/release/*.apk --app 1:68047584491:android:b275e5022e4f98a48992ae --groups developer
       env:
         FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
