@@ -40,14 +40,22 @@ jobs:
     - name: Install Firebase CLI
       run: npm install -g firebase-tools
 
-    - name: Print Credential
-      run: echo "${{ secrets.CREDENTIAL_FILE_CONTENT }}"
+    # - name: Print Credential
+    #   run: echo "${{ secrets.CREDENTIAL_FILE_CONTENT }}"
 
-    - name: Firebase App Distribution
-      uses: wzieba/Firebase-Distribution-Github-Action@v1.6.0
-      with:
-        appId: 1:68047584491:android:b275e5022e4f98a48992ae
-        serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
-        file: app/build/outputs/apk/release/app-release-unsigned.apk
-        groups: developer
-        releaseNotes: ${{ github.event.head_commit.message }}
+    - name: Deploy to Firebase App Distribution
+      run: |
+        firebase auth:import ${FIREBASE_SERVICE_ACCOUNT_KEY} --project playground-132e7
+        firebase appdistribution:distribute app/build/outputs/apk/release/*.apk --app 1:68047584491:android:b275e5022e4f98a48992ae --groups developer
+      env:
+        FIREBASE_SERVICE_ACCOUNT_KEY: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+      working-directory: app/build/outputs/apk/release/*.apk
+
+    # - name: Firebase App Distribution
+    #   uses: wzieba/Firebase-Distribution-Github-Action@v1.6.0
+    #   with:
+    #     appId: 1:68047584491:android:b275e5022e4f98a48992ae
+    #     serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
+    #     file: app/build/outputs/apk/release/app-release-unsigned.apk
+    #     groups: developer
+    #     releaseNotes: ${{ github.event.head_commit.message }}
