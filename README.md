@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple note app build using jetpack compose and material 3. This app use Room Database to store the notes. The App build with MVVM Design Pattern and Dagger Hilt. This app let you save notes, display the notes that you have created, update the notes, and also delete the notes that you want to delete. In the future I'll add firebase so the app will be able to save the notes in the internet and can be downloaded in other smartphones.
+This is a simple note app build using jetpack compose and material 3. This app use Room Database to store the notes. The App build with MVVM Design Pattern and Dagger Hilt. This app let you save notes, display the notes that you have created, update the notes, and also delete the notes that you want to delete. In the future I'll add firebase so the app will be able to save the notes in the internet and can be downloaded in other smartphones. Add Github Action for CI/CD.
 
 ## Plan of Improvement
 
