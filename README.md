@@ -10,6 +10,21 @@ This is a simple note app build using jetpack compose and material 3. This app u
 2. Firebase Authentication (for cloud storage)
 3. To Do List Notes
 4. Unit Test
+5. Message Encryption to ensure privacy
+6. Add machine learning
+7. Tablet support 
+8. Drawing  Notes
+
+## How to Run
+To run this project, simply clone this repository.
+
+```
+git clone https://github.com/BillyMRX1/The-Notes.git
+```
+
+Sync the gradle and build the project. 
+To run the app you need to use emulator or real devices. 
+Always checkout the main branch for the latest update.
 
 ## Tech Stack
 - [Kotlin](https://kotlinlang.org/) - Modern programming language for Android development.
